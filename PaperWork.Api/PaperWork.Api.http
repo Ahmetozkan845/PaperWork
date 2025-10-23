@@ -1,0 +1,6 @@
+@PaperWork.Api_HostAddress = http://localhost:5199
+
+GET {{PaperWork.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

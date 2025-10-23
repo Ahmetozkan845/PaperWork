@@ -1,0 +1,55 @@
+[
+  {
+    "ContainingType": "PaperWork.Api.Controllers.PaperWorkController",
+    "Method": "Get",
+    "RelativePath": "api/PaperWork",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pwId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaperWork.Api.Controllers.PaperWorkController",
+    "Method": "Create",
+    "RelativePath": "api/PaperWork",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "PaperWork.Api.Entitty.PaperWorkEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PaperWork.Api.Controllers.PaperWorkController",
+    "Method": "Update",
+    "RelativePath": "api/PaperWork/{pwId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pwId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "body",
+        "Type": "PaperWork.Api.Entitty.PaperWorkEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

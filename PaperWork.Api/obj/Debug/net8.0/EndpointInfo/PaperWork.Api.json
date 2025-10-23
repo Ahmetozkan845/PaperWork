@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PaperWork.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/PaperWork": {
+      "get": {
+        "tags": [
+          "PaperWork"
+        ],
+        "parameters": [
+          {
+            "name": "pwId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PaperWork"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PaperWork/{pwId}": {
+      "put": {
+        "tags": [
+          "PaperWork"
+        ],
+        "parameters": [
+          {
+            "name": "pwId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaperWorkEntity"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PaperWorkEntity": {
+        "required": [
+          "pwId"
+        ],
+        "type": "object",
+        "properties": {
+          "pwId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "year": {
+            "type": "string",
+            "nullable": true
+          },
+          "month": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedbackType": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionDecision": {
+            "type": "string",
+            "nullable": true
+          },
+          "directorate": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeRegistrationNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "cbaCodes": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedbackChannel": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionOwnerManager": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionOwnerManagerRegistrationNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedbackDetail": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionOwnerManagerFeedbackDetail": {
+            "type": "string",
+            "nullable": true
+          },
+          "gettingStartedGeneralDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "createUser": {
+            "type": "string",
+            "nullable": true
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
