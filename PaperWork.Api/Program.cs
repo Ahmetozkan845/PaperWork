@@ -5,9 +5,10 @@ using PaperWork.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// MySQL bağlantısı
 var cs = builder.Configuration.GetConnectionString("PaperWorkDb");
 builder.Services.AddDbContext<PaperWorkDbContext>(opt =>
-    opt.UseSqlServer(cs));   // ✅ SQL Server için UseSqlServer
+    opt.UseMySql(cs, ServerVersion.AutoDetect(cs))); 
 
 builder.Services.AddScoped<IPaperWorkRepository, PaperWorkRepository>();
 builder.Services.AddScoped<IPaperWorkService, PaperWorkService>();

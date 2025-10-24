@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaperWork.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d2b40a2917ae8deba6fa23773d3e04e36b2f3a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaperWork.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaperWork.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
