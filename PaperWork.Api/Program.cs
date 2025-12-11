@@ -6,9 +6,9 @@ using PaperWork.Api.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // MySQL bağlantısı
-var cs = builder.Configuration.GetConnectionString("PaperWorkDb");
+var cs = builder.Configuration.GetConnectionString("paperwork");
 builder.Services.AddDbContext<PaperWorkDbContext>(opt =>
-    opt.UseMySql(cs, ServerVersion.AutoDetect(cs))); 
+    opt.UseMySql(cs, ServerVersion.AutoDetect(cs)));
 
 builder.Services.AddScoped<IPaperWorkRepository, PaperWorkRepository>();
 builder.Services.AddScoped<IPaperWorkService, PaperWorkService>();
@@ -19,10 +19,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
 app.UseSwagger();
-app.UseSwaggerUI();
-
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PaperWork API v1");
+    c.RoutePrefix = string.Empty; 
+});
 
 app.MapControllers();
 app.Run();
